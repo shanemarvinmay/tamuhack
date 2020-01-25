@@ -1,0 +1,27 @@
+{
+  "name": "tamuhack",
+  "version": "1.0.0",
+  "description": "tamuhack project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "console.log('test cmd reached');"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shanemarvinmay/tamuhack.git"
+  },
+  "keywords": [
+    "tamuhack",
+    "shanemarvinmay"
+  ],
+  "author": "shanemarvinmay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shanemarvinmay/tamuhack/issues"
+  },
+  "homepage": "https://github.com/shanemarvinmay/tamuhack#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
