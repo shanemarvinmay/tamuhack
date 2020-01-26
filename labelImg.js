@@ -1,4 +1,4 @@
-async function quickstart(img) { 
+async function quickstart() { 
     //imports the Google Cloud client library
     const vision = require('@google-cloud/vision');
     
@@ -6,7 +6,7 @@ async function quickstart(img) {
     const client = new vision.ImageAnnotatorClient();
 
     //Performs label detection on the image file 
-    const [result] = await client.labelDetection(img);
+    const [result] = await client.labelDetection("ZeroTwo.jpg");
     const labels = result.labelAnnotations;
     console.log('Labels:');
     labels.forEach(label => console.log(label.description));
