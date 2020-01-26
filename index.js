@@ -6,7 +6,7 @@ let formidable = require('formidable');
 let path = require('path');
 let cwd = path.basename(path.resolve());
 
-
+// serving html 
 app.get('/', (req, res) => {
     res.sendFile('index.html', {root: __dirname });
 });
