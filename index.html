@@ -15,47 +15,6 @@
         </form>
     </div>
     <script>
-        let input = document.querySelector('#input');
-        let submit = document.querySelector('#submit');
-        let reader = new FileReader();
-        let postImg = (img) => {
-            let json = {'img':img};
-            json = JSON.stringify(json);
-            console.log(json);
-            // ajax post 
-            let data = new FormData();
-            // data.append('img',img);
-            data.append('img',json);
-            let xhr = new XMLHttpRequest();
-            xhr.open('POST',`http://localhost:3000/submit-image?img=just-work!`, true);
-            xhr.onload = () => {
-                console.log(this.response);
-            };
-            // WHEN AJAX IS RUNNING
-            xhr.onprogress = function(){
-            console.log("Progress");
-            };
-
-            // WHEN THE PROCESS IS COMPLETE
-            xhr.onload = function(){
-            console.log("Done");
-            console.log(this.status);
-            };
-
-            // WHEN AN ERROR IS ENCOUNTERED
-            xhr.onerror = function(){
-            console.log("Error");
-            };
-            xhr.send(data);
-        };
-        submit.onclick = () => {
-            // console.log(input.files[0]);
-            reader.onload = () => {
-                imgBase64 = reader.result;
-                postImg(imgBase64);
-            };
-            reader.readAsDataURL(input.files[0]);  
-        };
 
     </script>
 </body>
