@@ -22,14 +22,10 @@
   },
   "homepage": "https://github.com/shanemarvinmay/tamuhack#readme",
   "dependencies": {
-
     "@google-cloud/vision": "^1.8.0",
- 
-
     "express": "^4.17.1",
     "formidable": "^1.2.1",
     "fs": "0.0.1-security",
     "path": "^0.12.7"
-
   }
 }
