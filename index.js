@@ -15,15 +15,14 @@ app.post('/submit-image', (req, res) => {
     console.log(req.query);
     let form = new formidable.IncomingForm();
     form.parse(req, (err, fields, files) => {
-        console.log(files.file.path);
-        fs.rename(files.file.path, 'img.png', function (err) {
+        let oldPath = files.file.path;
+        let newPath = 'img.png';
+        fs.rename(oldPath, newPath, (err) => {
             if (err) throw err;
             res.write('File uploaded and moved!');
             res.end();
-        });
-        
+        }); 
     });
-    
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
